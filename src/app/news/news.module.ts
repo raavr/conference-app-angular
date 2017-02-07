@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NewsDetailComponent, NewsCategoriesComponent, NewsListComponent, NewsComponent } from './'
+import { NewsDetailComponent, NewsCategoriesComponent, NewsListComponent, NewsComponent, NewsOutletComponent } from './'
 import { MaxLenPipe } from './news/news-len.pipe';
 import { NewsRoutingModule } from './news-routing.module';
 
@@ -14,6 +14,7 @@ import { NewsRoutingModule } from './news-routing.module';
         NewsCategoriesComponent,
         NewsListComponent,
         NewsComponent,
+        NewsOutletComponent,
         MaxLenPipe
     ],
     exports: [

@@ -5,6 +5,7 @@ import { FullAgendaComponent } from './agenda';
 import { AgendaResolver } from './agenda/full-agenda/full-agenda.resolver';
 
 export const ROUTES: Routes = [
+  { path: 'news', loadChildren: '/app/news/news.module#NewsModule' },
   { path: 'agenda', component: FullAgendaComponent, resolve: { agenda: AgendaResolver } },
   { path: '**',    component: NoContentComponent }
 ];
