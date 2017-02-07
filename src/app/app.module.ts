@@ -12,28 +12,22 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { NavbarComponent } from './navbar';
-import { HomeComponent } from './home';
 import { DayAgendaComponent } from './agenda';
 import { FullAgendaComponent } from './agenda';
 import { AgendaRowComponent } from './agenda';
 import { AgendaCellComponent } from './agenda';
-import { NewsDetailComponent } from './news';
-import { NewsListComponent } from './news';
-import { NewsCategoriesComponent } from './news';
-import { NewsComponent } from './news';
 import { NoContentComponent } from './no-content';
 import { AppFooterComponent } from './app-footer';
-import { MaxLenPipe } from './news/news/news-len.pipe';
-import { NewsService } from './news/news/news.service';
 import { AgendaService } from './agenda/agenda/agenda.service';
 import { CollapseNavbarDirective } from './navbar/navbar-collapse.directive';
 
 import { SpeakersModule } from './speakers';
 import { PresentationsModule } from './presentations';
 import { PartnersModule } from './partners';
+import { HomeModule } from './home';
+import { NewsModule } from './news';
 
 const APP_SERVICE_PROVIDERS = [
-  NewsService,
   AgendaService
 ];
 
@@ -52,17 +46,11 @@ const APP_PROVIDERS = [
     AppComponent,
     NavbarComponent,
     AppFooterComponent,
-    HomeComponent,
     DayAgendaComponent,
     FullAgendaComponent,
     AgendaRowComponent,
     AgendaCellComponent,
-    NewsDetailComponent,
-    NewsListComponent,
-    NewsCategoriesComponent,
-    NewsComponent,
     NoContentComponent,
-    MaxLenPipe,
     CollapseNavbarDirective
   ],
   imports: [ // import Angular's modules
@@ -72,6 +60,8 @@ const APP_PROVIDERS = [
     SpeakersModule,
     PresentationsModule,
     PartnersModule,
+    HomeModule,
+    NewsModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
