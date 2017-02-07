@@ -1,0 +1,55 @@
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~bootstrap/scss/variables";
+
+.presentation-list-section {
+    background-color: #e9eef0;
+}
+
+.presentation-item {
+    padding-top: 75px;
+    padding-bottom: 75px;
+    border-bottom: 2px #c9c9c9 solid;
+
+    &:last-child {
+        border: 0;
+    }
+
+    .presentation-container {
+        margin-right: 0;
+        
+        @include media-breakpoint-up(md) {
+            margin-right: 30px;
+        }
+        
+        @include media-breakpoint-up(lg) {
+            margin-right: 50px;
+        }
+    }
+
+    .presentation-title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .presentation-desc {
+        font-size: 2rem;
+        text-align: justify;
+    }
+
+    .presentation-meta {
+        margin-bottom: 30px;
+    }
+
+    .presentation-day {
+        font-weight: 700;
+    }
+
+    .presentation-room {
+        padding: 5px;
+        background-color: #158fcf;
+        display: inline-block;
+        margin-left: 5px;
+        color: #ffffff;
+    }
+}

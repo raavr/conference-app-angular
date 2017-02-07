@@ -1,0 +1,119 @@
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~bootstrap/scss/variables";
+
+.agenda-day{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.agenda-table {
+    background-color: transparent;
+    width: 100%;
+
+    thead, tbody, th, tr {
+        display: block;
+
+    }
+    
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+
+        @include media-breakpoint-up(md) {
+            position: static;
+        }
+    }
+
+    tr {
+        border: none;
+        border-bottom: 10px solid #FFF;
+    }
+
+     th {
+        text-align: center;
+        font-size: 1.8rem;
+        color: #000;
+        padding: 10px;
+
+        &.th-room {
+            display: none;
+        }
+
+        &.th-room.active {
+            display: block;
+
+             @include media-breakpoint-up(md) {
+                 display: table-cell;
+             }
+
+        }
+
+    }
+
+    @include media-breakpoint-up(md) {
+        thead {
+            display: table-header-group;
+        }
+
+        tbody {
+            display: table-row-group;
+        }
+
+        tr {
+            display: table-row;
+            border-bottom: 0;
+        }
+    }
+}
+
+
+.btn-container {
+    text-align: center;
+    margin-bottom: 30px;
+
+     @include media-breakpoint-up(sm) {
+         margin-bottom: 40px;
+    }
+
+    .btn-room {
+        width: 30%;
+        padding: 15px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        font-size: 1.6rem;
+        transition: all 0.3s ease-in-out;
+
+        &:focus {
+            outline: none;
+        }
+
+        &:nth-child(3n), &:last-child {
+            margin-right: 0;
+        }
+        
+
+        &.active {
+            background-color: #03060b;
+            color: #fff;
+        }
+
+         @include media-breakpoint-up(sm) {
+             width: 30%;
+             font-size: 1.6rem;
+
+            &:nth-child(3n) {
+                margin-right: 10px;
+            }
+             
+         }
+
+        @include media-breakpoint-up(md) {
+             width: 18%;
+             padding: 20px 30px;
+             font-size: 2rem;
+         }
+    }
+    
+}

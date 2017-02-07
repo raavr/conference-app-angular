@@ -1,0 +1,257 @@
+{ 
+    "agenda": [
+        {   
+            "day": "4 Feb 2017",
+            "totalRooms": 5,
+            "agenda" : [
+                {
+                    "title": "Registration",
+                    "speakers": [],
+                    "timeStart" : 1486195200000,
+                    "timeEnd": 1486198800000,
+                    "type": "general"
+                },
+                {
+                    "title": "Welcome",
+                    "speakers": [
+                        {
+                            "id": 1,
+                            "name": "John",
+                            "surname": "Doe",
+                            "company": "Best Corp",
+                            "img": "speaker-1",
+                            "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+                        },
+                        {
+                            "id": 2,
+                            "name": "Troy",
+                            "surname": "Green",
+                            "company": "Media Group",
+                            "img": "speaker-2",
+                            "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+                    }],
+                    "timeStart" : 1486198800000,
+                    "timeEnd": 1486201500000,
+                    "type": "presentation",
+                    "room": 1
+                },
+                {
+                    "title": "Morning Break",
+                    "speakers": [],
+                    "timeStart" : 1486201500000,
+                    "timeEnd": 1486204200000,
+                    "type": "general"
+                },
+                {
+                    "title": "Secure your app",
+                    "speakers": [{
+                        "id": 1,                             
+                        "name": "John",                             
+                        "surname": "Doe",                             
+                        "company": "Best Corp",                             
+                        "img": "speaker-1",                             
+                        "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."                         
+                    }],
+                    "timeStart" : 1486204200000,
+                    "timeEnd": 1486206900000,
+                    "type": "presentation",
+                    "room": 1
+                },
+                {
+                    "title": "New data structure in Angular2",
+                    "speakers": [{                             
+                        "id": 1,                             
+                        "name": "John",                             
+                        "surname": "Doe",                             
+                        "company": "Best Corp",                             
+                        "img": "speaker-1",                             
+                        "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."                         
+                    }],
+                    "timeStart" : 1486204200000,
+                    "timeEnd": 1486206900000,
+                    "type": "presentation",
+                    "room": 2
+                },
+                {
+                    "title": "Services - what they do",
+                    "speakers": [{                           
+                        "id": 1,                             
+                        "name": "John",                             
+                        "surname": "Doe",                             
+                        "company": "Best Corp",                             
+                        "img": "speaker-1",                             
+                        "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."                         
+                    }],
+                    "timeStart" : 1486204200000,
+                    "timeEnd": 1486206900000,
+                    "type": "presentation",
+                    "room": 3
+                },
+                {
+                    "title": "Mobile apps with Angular",
+                    "speakers": [ {                             
+                        "id": 1,                             
+                        "name": "John",                             
+                        "surname": "Doe",                             
+                        "company": "Best Corp",                             
+                        "img": "speaker-1",                             
+                        "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."                         
+                    }],
+                    "timeStart" : 1486206900000,
+                    "timeEnd": 1486209600000,
+                    "type": "presentation",
+                    "room": 1
+                },
+                {
+                    "title": "Best JS Framework",
+                    "speakers": [ {                             
+                        "id": 1,                             
+                        "name": "John",                             
+                        "surname": "Doe",                             
+                        "company": "Best Corp",                             
+                        "img": "speaker-1",                             
+                        "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."                         
+                    }],
+                    "timeStart" : 1486206900000,
+                    "timeEnd": 1486209600000,
+                    "type": "presentation",
+                    "room": 5
+                },
+                {
+                    "title": "Angular vs React",
+                    "speakers": [{                             
+                        "id": 1,                             
+                        "name": "John",                             
+                        "surname": "Doe",                             
+                        "company": "Best Corp",                             
+                        "img": "speaker-1",                             
+                        "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."                         
+                    }],
+                    "timeStart" : 1486206900000,
+                    "timeEnd": 1486209600000,
+                    "type": "presentation",
+                    "room": 3
+                }
+            ]
+            
+        },
+        {   
+            "day": "5 Feb 2017",
+            "totalRooms": 3,
+            "agenda" : [
+                {
+                    "title": "Day Two",
+                    "speakers": [],
+                    "timeStart" : 1486281600000,
+                    "timeEnd": 1486285200000,
+                    "type": "general"
+                },
+                {
+                    "title": "Welcome",
+                    "speakers": [{                             
+                        "id": 1,                             
+                        "name": "John",                             
+                        "surname": "Doe",                             
+                        "company": "Best Corp",                             
+                        "img": "speaker-1",                             
+                        "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."                         
+                    }, {
+                        "id": 3,
+                        "name": "George",
+                        "surname": "Dust",
+                        "company": "Gressy Soft",
+                        "img": "speaker-3",
+                        "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."
+                    }],
+                    "timeStart" : 1486285200000,
+                    "timeEnd": 1486287900000,
+                    "type": "presentation",
+                    "room": 1
+                },
+                {
+                    "title": "Morning Break",
+                    "speakers": [],
+                    "timeStart" : 1486287900000,
+                    "timeEnd":  1486290600000,
+                    "type": "general"
+                },
+                {
+                    "title": "Secure your app",
+                    "speakers": [{                             
+                        "id": 1,                             
+                        "name": "John",                             
+                        "surname": "Doe",                             
+                        "company": "Best Corp",                             
+                        "img": "speaker-1",                             
+                        "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."                         
+                    }],
+                    "timeStart" : 1486290600000,
+                    "timeEnd": 1486293300000,
+                    "type": "presentation",
+                    "room": 1
+                },
+                {
+                    "title": "New data structure in Angular2",
+                    "speakers": [ {                             
+                        "id": 1,                             
+                        "name": "John",                             
+                        "surname": "Doe",                             
+                        "company": "Best Corp",                             
+                        "img": "speaker-1",                             
+                        "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."                         
+                    }],
+                    "timeStart" : 1486290600000,
+                    "timeEnd": 1486293300000,
+                    "type": "presentation",
+                    "room": 2
+                },
+                {
+                    "title": "Services - what they do",
+                    "speakers": [ {                             
+                        "id": 1,                             
+                        "name": "John",                             
+                        "surname": "Doe",                             
+                        "company": "Best Corp",                             
+                        "img": "speaker-1",                             
+                        "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."                         
+                    }],
+                    "timeStart" : 1486290600000,
+                    "timeEnd": 1486293300000,
+                    "type": "presentation",
+                    "room": 3
+                },
+                {
+                    "title": "Mobile apps with Angular",
+                    "speakers": [ {                             
+                        "id": 1,                             
+                        "name": "John",                             
+                        "surname": "Doe",                             
+                        "company": "Best Corp",                             
+                        "img": "speaker-1",                             
+                        "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."                         
+                    }],
+                    "timeStart" : 1486293300000,
+                    "timeEnd": 1486296000000,
+                    "type": "presentation",
+                    "room": 1
+                },
+                {
+                    "title": "Angular vs React",
+                    "speakers": [ {                             
+                        "id": 1,                             
+                        "name": "John",                             
+                        "surname": "Doe",                             
+                        "company": "Best Corp",                             
+                        "img": "speaker-1",                             
+                        "desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur."                         
+                    }],
+                    "timeStart" : 1486293300000,
+                    "timeEnd": 1486296000000,
+                    "type": "presentation",
+                    "room": 3
+                }
+            ]
+            
+        }
+    ]
+}

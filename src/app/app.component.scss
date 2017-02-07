@@ -1,0 +1,76 @@
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap-grid";
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~bootstrap/scss/variables";
+
+$fa-font-path: "../assets/font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
+
+$section-text-dark: #000000;
+$section-text-light: #FFFFFF;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body{
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+.app-section {
+  padding: 80px 0;
+}
+
+.app-section-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0px 0 50px 0;
+  text-align: center;
+}
+
+.app-section-description {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.text-dark {
+  color: $section-text-dark;
+}
+
+.text-light {
+  color: $section-text-light;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.visible-xs-inline {
+    display: inline-block;
+
+     @include media-breakpoint-up(md) {
+       display: none;
+     }
+}
+
+.clear-fix::after, .clear-fix::before {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.col-center {
+  display: inline-block;
+  float: none;
+}
+
+.route-section {
+  margin-top: 80px;
+  padding: 50px 0;
+  min-height: 500px;
+}

@@ -1,0 +1,16 @@
+<section *ngIf="news" class="route-section news-section">
+    <div class="container news-container">
+        <div class="row">
+            <div class="col-sm-12 col-md-10 col-lg-8 news-separator">
+                <div class="row posts-wrapper">
+                    <news [news]="news" [onList]="false"></news>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2 col-lg-4">
+                <div class="row">
+                    <news-categories></news-categories>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

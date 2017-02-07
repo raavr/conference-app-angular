@@ -1,0 +1,11 @@
+<div *ngIf="news" class="col-sm-12 col-md-11 post-container">
+    <h2 class="post-title">
+        <a *ngIf="onList" [routerLink]="['../news', news.id]">{{news.title}}</a>
+        <span *ngIf="!onList">{{news.title}}</span>
+    </h2>
+    <time class="post-date" datetime="news.date | date:'medium'">{{news.date | date:'mediumDate'}}</time>
+    <p class="post-content">
+        <span *ngIf="onList">{{news.message | maxLen:350}}</span>
+        <span *ngIf="!onList">{{news.message}}</span>
+    </p>
+</div>

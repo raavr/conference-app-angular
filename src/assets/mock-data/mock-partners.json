@@ -1,0 +1,74 @@
+{
+    "partners" : [
+        {
+            "id": 1,
+            "img": "sponsor-1",
+            "companyName": "Company Name",
+            "type": "platinum"
+        },
+        {
+            "id": 2,
+            "img": "sponsor-2",
+            "companyName": "Company Name",
+            "type": "gold"
+        },
+        {
+            "id": 3,
+            "img": "sponsor-3",
+            "companyName": "Company Name",
+            "type": "gold"
+        },
+        {
+            "id": 4,
+            "img": "sponsor-4",
+            "companyName": "Company Name",
+            "type": "gold"
+        },
+        {
+            "id": 5,
+            "img": "sponsor-5",
+            "companyName": "Company Name",
+            "type": "silver"
+        },
+        {
+            "id": 6,
+            "img": "sponsor-6",
+            "companyName": "Company Name",
+            "type": "silver"
+        },
+        {
+            "id": 7,
+            "img": "sponsor-7",
+            "companyName": "Company Name",
+            "type": "silver"
+        },
+        {
+            "id": 8,
+            "img": "sponsor-8",
+            "companyName": "Company Name",
+            "type": "silver"
+        },
+        {
+            "id": 9,
+            "img": "sponsor-9",
+            "companyName": "Company Name",
+            "type": "silver"
+        },
+        {
+            "id": 10,
+            "img": "sponsor-10",
+            "companyName": "Company Name",
+            "type": "bronze"
+        },{
+            "id": 11,
+            "img": "sponsor-11",
+            "companyName": "Company Name",
+            "type": "bronze"
+        },{
+            "id": 12,
+            "img": "sponsor-12",
+            "companyName": "Company Name",
+            "type": "bronze"
+        }
+    ]
+}

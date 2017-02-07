@@ -1,0 +1,24 @@
+<div class="row" *ngIf="isActive">
+    <div class="col-xs-12">
+        <h2 class="agenda-day">{{agendaRows.day}}</h2>
+    </div>
+    <div class="col-xs-12">
+        <div class="btn-container">
+            <button *ngFor="let room of rooms" class="btn btn-room" [class.active]="isRoomActive(room)" (click)="toggleRoomActive(room)" type="button">Room {{room}}</button>
+        </div>
+    </div>
+    <div class="col-xs-12">
+        <table class="agenda-table">
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th *ngFor="let room of rooms" [style.width]="computeTHWidth()" [class.active]="isRoomActive(room)" class="th-room">Room {{room}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tr of agendaRows.agenda" agenda-row [row]="tr" [activeRooms]="activeRooms">               
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

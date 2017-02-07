@@ -1,0 +1,16 @@
+<section class="route-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="app-section-title text-dark">Agenda</h2>
+            </div>
+            <div class="col-xs-12">
+                <ul class="days-name-list">
+                    <li *ngFor="let dayName of daysName; let i = index" class="days-item" [class.active]="isActive(i)" [style.width]="computeDayNameWidth()"><a (click)="setDayActive(i)" [title]="dayName">{{dayName | uppercase}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <speaker-modal [speaker]="selectedSpeaker"></speaker-modal>
+        <day-agenda *ngFor="let dayAgenda of agenda; let i = index" [agendaRows]="dayAgenda" [isActive]="isActive(i)"></day-agenda>
+    </div>
+</section>

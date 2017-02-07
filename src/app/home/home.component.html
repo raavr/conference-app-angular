@@ -1,0 +1,94 @@
+<header class="app-header">
+  <div class="container header-container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 offset-sm-0 col-md-10 offset-md-1">
+        <h1 class="app-title">JS Conference</h1>
+        <p class="app-description">JS Conference for Front-end developers</p>
+        <button type="button" class="btn btn-more" [routerLink]="['/agenda']">Agenda</button>
+      </div>
+    </div>
+  </div>
+</header>
+<section class="app-section app-about">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 offset-xs-0 col-md-8 offset-md-2">
+          <h2 class="app-section-title text-dark">JS Conference</h2>
+          <p class="app-section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="col-xs-12 col-md-6 col-about">
+        <h3 class="conf-date"><time datetime="X.02.2017T10:00">X - Yth February 2017</time></h3>
+        <p class="conf-date-more">JS Conference starts at 10 a.m.</p>
+      </div>
+      <div class="col-xs-12 col-md-6 col-about">
+        <h3 class="conf-date">Palace of Culture and Science</h3>
+        <p class="conf-date-more">Plac Defilad 1 St.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="app-section app-speakers">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="app-section-title text-dark">Check out our speakers!</h2>
+      </div>
+      <div class="col-sm-12 col-md-4" *ngFor="let speaker of speakers">
+          <speaker-item [speaker]="speaker"></speaker-item>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-more" type="button" [routerLink]="['/speakers']">See more</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="app-section app-news">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 offset-xs-0 col-md-8 offset-md-2">
+        <h2 class="app-section-title text-light">News</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-lg-4" *ngFor="let ns of (news)">
+        <article class="post">
+          <h3 class="post-title">
+            <a href="#" [title]="ns.title" [routerLink]="['/news', ns.id]">{{ns.title}}</a>
+          </h3>
+          <time class="post-date" datetime="ns.date | date:'medium'">{{ns.date | date:'mediumDate'}}</time>
+          <p class="post-content">{{ns.message | maxLen:300 }}</p>
+          <a class="post-more" href="#" [routerLink]="['/news', ns.id]">read more</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="app-section app-cfp">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 offset-xs-0 col-md-8 offset-md-2 text-dark">
+        <h2 class="app-section-title">Call for Presenters</h2>
+        <p class="app-section-description">Call for Presenters is already closed. We hope to meet your expectations.</p>
+        <p class="app-section-description">See you on JS Conference!</p>
+        <p class="app-section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="app-section app-partners text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 offset-xs-0 col-md-8 offset-md-2">
+        <h2 class="app-section-title text-dark">Our Partners</h2>
+      </div>
+    </div>
+    <partner-group *ngFor="let partnerGroup of partnersGroups" [partnerGroup]="partnerGroup"></partner-group>
+    <div class="row">
+      <div class="col-xs-12">
+        <button class="btn btn-more" type="button" [routerLink]="['/partners']">See more</button>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+<div *ngIf="speaker" class="modal fade" id="speakerModal" tabindex="-1" role="dialog" aria-labelledby="speakerModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="speaker-item">
+         <img class="speaker-photo" [src]="'../../assets/img/' + speaker.img + '.jpg'" [alt]="speaker.name + ' ' + speaker.surname">
+          <p class="speaker-name">{{speaker.name}} {{speaker.surname}}</p>
+          <p class="speaker-company">{{speaker.company}}</p>
+        </div>
+      </div>
+      <div class="modal-body">
+        <p class="speaker-desc">{{speaker.desc}}</p>
+      </div>
+    </div>
+  </div>
+</div>

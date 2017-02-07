@@ -1,0 +1,13 @@
+<section *ngIf="speakers" class="route-section speakers-list-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="app-section-title text-dark">Our speakers!</h2>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4" *ngFor="let speaker of speakers">
+                <speaker-item  [speaker]="speaker" (click)="selectSpeaker(speaker)"></speaker-item>
+            </div>
+            <speaker-modal [speaker]="selectedSpeaker"></speaker-modal>
+        </div>
+    </div>
+</section>

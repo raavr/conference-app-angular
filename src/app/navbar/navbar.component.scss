@@ -1,0 +1,75 @@
+@import "~bootstrap/scss/mixins/clearfix";
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~bootstrap/scss/variables";
+
+$navbar-bg: #ffffff;
+
+.navbar {
+    background-color: $navbar-bg;
+    font-size: 2rem;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    @include clearfix();
+
+    @include media-breakpoint-up(lg) {
+        &::after {
+            display: none;
+        }
+    }
+
+    .navbar-brand {
+        line-height: 70px;
+        height: 70px;
+        border: 0;
+        padding: 0 40px 0 20px;
+        font-size: 2rem;
+        width: 110px;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }  
+    }
+
+    .navbar-toggler {
+        margin: 20px;
+        
+        &:focus {
+            outline: 0;
+        }
+    }
+}
+
+.navbar-list-fix {
+    float: none;
+
+    @include media-breakpoint-up(lg) {
+        & {
+            float: right;
+        }
+    }
+
+    .nav-link {
+        line-height: 40px;
+        height: 40px;
+        text-align: center;
+        border: 0;
+        color: #000000;
+
+        @include media-breakpoint-up(lg) {
+            & {
+                line-height: 70px;
+                height: 70px;
+                padding: 0 20px 0 0;
+                text-align: left;
+            }
+        }
+    }
+}
+
+
+

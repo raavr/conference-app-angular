@@ -1,0 +1,33 @@
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~bootstrap/scss/variables";
+
+.speaker-item {
+    text-align: center;
+    cursor: pointer;
+    
+    .speaker-photo {
+        width: 100%;
+        max-width: 200px;
+        max-height: 200px;
+        margin-top: 20px;
+        border-radius: 50%;
+
+        @include media-breakpoint-up(lg) {
+            max-width: 250px;
+            max-height: 250px;
+            margin: 15px auto;
+        }
+    }
+
+    .speaker-name {
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 700;
+        margin: 10px 0 5px 0;
+    }
+
+    .speaker-company {
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+    }
+}

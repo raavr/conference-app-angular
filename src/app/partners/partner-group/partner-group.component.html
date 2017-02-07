@@ -1,0 +1,12 @@
+<div class="row text-center">
+    <div class="col-xs-12 partner-type">
+        <h3 class="partner-type">{{partnerGroup.type}}</h3>
+    </div>
+</div>
+<div class="row text-center">
+    <div class="col-xs-6 col-md-4 col-lg-3 col-center" *ngFor="let partner of partnerGroup.items">
+    <a href="#" title="{{partner.companyName}}">
+        <img class="img-fluid" [src]="'../../assets/img/' + partner.img + '.png'" alt="{{partner.companyName}}">
+    </a>
+    </div>
+</div>

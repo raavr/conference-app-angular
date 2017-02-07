@@ -1,0 +1,120 @@
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "~bootstrap/scss/variables";
+
+td {
+    display: block;
+    border: none;
+    border-bottom: 1px solid #FFF;
+    position: relative;
+    padding-left: 30%;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-weight: 300;
+
+    @include media-breakpoint-up(md) {
+        border: 1px solid #ffffff;
+        padding: 10px 10px;
+        vertical-align: top;
+        display: table-cell;
+    }
+
+    &:before {
+        position: absolute;
+        top: 4px;
+        left: 6px;
+        width: 25%;
+        padding-right: 10px;
+        white-space: nowrap;     
+        font-size: 1.4rem;   
+    }
+
+    &.presentation-2:before {
+        content: "Room 2";
+    }
+
+    &.presentation-1:before {
+        content: "Room 1";
+    }
+
+    &.presentation-3:before {
+        content: "Room 3";
+    }
+    
+    &.presentation-4:before {
+        content: "Room 4";
+    }
+
+    &.presentation-5:before {
+        content: "Room 5";
+    }
+    
+    &.presentation-6:before {
+        content: "Room 6";
+    }
+
+    @include media-breakpoint-up(md) {
+        &.presentation-1:before, &.presentation-2:before, &.presentation-3:before, &.presentation-4:before, &.presentation-5:before, &.presentation-6:before{
+            content: "";
+        }
+    }
+
+    &.time, &.general {
+        background-color: #eeeeee;
+        font-size: 1.6rem;
+        padding-left: 6px;
+    }
+}
+
+.gap-1, .presentation-1, .gap-2, .presentation-2, .gap-3, .presentation-3, .gap-4, .presentation-4, .gap-5, .presentation-5, .gap-6, .presentation-6 {
+    display: none;
+
+    &.active {
+        display: block;
+
+        @include media-breakpoint-up(md) {
+            display: table-cell;
+        }
+    }
+}
+
+.gap {
+    background-color: #FFF;
+
+     &.active {
+         display: none;
+
+        @include media-breakpoint-up(md) {
+            display: table-cell;
+        }
+     }
+
+}
+
+
+
+
+
+// .presentation-5, .gap-5 {
+//     background-color: #9B72FF;
+//     color: #FFF;
+// }
+
+// .presentation-4, .gap-4 {
+//     background-color: #DEBC00;
+//     color: #FFF;
+// }
+
+// .presentation-3, .gap-3 {
+//     background-color: #FF5858;
+//     color: #FFF;
+// }
+
+// .presentation-2, .gap-2 {
+//     background-color: #0994D9;
+//     color: #FFF;
+// }
+
+// .presentation-1, .gap-1 {
+//     background-color: #00BE9E;
+//     color: #FFF;
+// }
