@@ -15,34 +15,29 @@ import { NavbarComponent } from './navbar';
 import { HomeComponent } from './home';
 import { PartnerGroupComponent } from './partners'
 import { PartnerListComponent } from './partners';
-import { SpeakerItemComponent } from './speakers';
-import { SpeakerListComponent } from './speakers';
 import { DayAgendaComponent } from './agenda';
 import { FullAgendaComponent } from './agenda';
 import { AgendaRowComponent } from './agenda';
 import { AgendaCellComponent } from './agenda';
-import { PresentationListComponent } from './presentations';
 import { NewsDetailComponent } from './news';
 import { NewsListComponent } from './news';
 import { NewsCategoriesComponent } from './news';
 import { NewsComponent } from './news';
-import { SpeakerModalComponent } from './speakers';
 import { NoContentComponent } from './no-content';
 import { AppFooterComponent } from './app-footer';
 import { MaxLenPipe } from './news/news/news-len.pipe';
-import { SpeakerService } from './speakers/speaker/speaker.service';
 import { NewsService } from './news/news/news.service';
 import { PartnerService } from './partners/partner/partner.service';
 import { AgendaService } from './agenda/agenda/agenda.service';
-import { PresentationService } from './presentations/presentation/presentation.service';
 import { CollapseNavbarDirective } from './navbar/navbar-collapse.directive';
 
+import { SpeakersModule } from './speakers';
+import { PresentationsModule } from './presentations';
+
 const APP_SERVICE_PROVIDERS = [
-  SpeakerService,
   NewsService,
   PartnerService,
-  AgendaService,
-  PresentationService
+  AgendaService
 ];
 
 // Application wide providers
@@ -63,10 +58,6 @@ const APP_PROVIDERS = [
     HomeComponent,
     PartnerGroupComponent,
     PartnerListComponent,
-    SpeakerItemComponent,
-    SpeakerListComponent,
-    SpeakerModalComponent,
-    PresentationListComponent,
     DayAgendaComponent,
     FullAgendaComponent,
     AgendaRowComponent,
@@ -83,6 +74,8 @@ const APP_PROVIDERS = [
     BrowserModule,
     FormsModule,
     HttpModule,
+    SpeakersModule,
+    PresentationsModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
