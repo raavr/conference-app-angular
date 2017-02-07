@@ -12,13 +12,8 @@ import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { NavbarComponent } from './navbar';
-import { DayAgendaComponent } from './agenda';
-import { FullAgendaComponent } from './agenda';
-import { AgendaRowComponent } from './agenda';
-import { AgendaCellComponent } from './agenda';
 import { NoContentComponent } from './no-content';
 import { AppFooterComponent } from './app-footer';
-import { AgendaService } from './agenda/agenda/agenda.service';
 import { CollapseNavbarDirective } from './navbar/navbar-collapse.directive';
 
 import { SpeakersModule } from './speakers';
@@ -26,9 +21,10 @@ import { PresentationsModule } from './presentations';
 import { PartnersModule } from './partners';
 import { HomeModule } from './home';
 import { NewsModule } from './news';
+import { AgendaModule } from './agenda';
 
 const APP_SERVICE_PROVIDERS = [
-  AgendaService
+
 ];
 
 // Application wide providers
@@ -46,10 +42,6 @@ const APP_PROVIDERS = [
     AppComponent,
     NavbarComponent,
     AppFooterComponent,
-    DayAgendaComponent,
-    FullAgendaComponent,
-    AgendaRowComponent,
-    AgendaCellComponent,
     NoContentComponent,
     CollapseNavbarDirective
   ],
@@ -62,6 +54,7 @@ const APP_PROVIDERS = [
     PartnersModule,
     HomeModule,
     NewsModule,
+    AgendaModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
