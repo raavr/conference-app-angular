@@ -6,8 +6,6 @@ import { NoContentComponent } from './no-content';
 import { NavbarComponent } from './navbar';
 import { NewsDetailResolver } from './news/news-detail/news-detail.resolver';
 import { NewsListResolver } from './news/news-list/news-list.resolver';
-import { PartnerListComponent } from './partners/partner-list/partner-list.component';
-import { PartnerListResolver } from './partners/partner-list/partner-list.resolver';
 import { FullAgendaComponent } from './agenda';
 import { AgendaResolver } from './agenda/full-agenda/full-agenda.resolver';
 
@@ -16,7 +14,6 @@ export const ROUTES: Routes = [
   { path: 'home',  component: HomeComponent},
   { path: 'news', component: NewsListComponent, resolve: {news : NewsListResolver }},
   { path: 'news/:id', component: NewsDetailComponent, resolve: { news: NewsDetailResolver }},
-  { path: 'partners', component: PartnerListComponent, resolve: { partners: PartnerListResolver }},
   { path: 'agenda', component: FullAgendaComponent, resolve: { agenda: AgendaResolver } },
   { path: '**',    component: NoContentComponent }
 ];

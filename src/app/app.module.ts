@@ -13,8 +13,6 @@ import { AppComponent } from './app.component';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { NavbarComponent } from './navbar';
 import { HomeComponent } from './home';
-import { PartnerGroupComponent } from './partners'
-import { PartnerListComponent } from './partners';
 import { DayAgendaComponent } from './agenda';
 import { FullAgendaComponent } from './agenda';
 import { AgendaRowComponent } from './agenda';
@@ -27,16 +25,15 @@ import { NoContentComponent } from './no-content';
 import { AppFooterComponent } from './app-footer';
 import { MaxLenPipe } from './news/news/news-len.pipe';
 import { NewsService } from './news/news/news.service';
-import { PartnerService } from './partners/partner/partner.service';
 import { AgendaService } from './agenda/agenda/agenda.service';
 import { CollapseNavbarDirective } from './navbar/navbar-collapse.directive';
 
 import { SpeakersModule } from './speakers';
 import { PresentationsModule } from './presentations';
+import { PartnersModule } from './partners';
 
 const APP_SERVICE_PROVIDERS = [
   NewsService,
-  PartnerService,
   AgendaService
 ];
 
@@ -56,8 +53,6 @@ const APP_PROVIDERS = [
     NavbarComponent,
     AppFooterComponent,
     HomeComponent,
-    PartnerGroupComponent,
-    PartnerListComponent,
     DayAgendaComponent,
     FullAgendaComponent,
     AgendaRowComponent,
@@ -76,6 +71,7 @@ const APP_PROVIDERS = [
     HttpModule,
     SpeakersModule,
     PresentationsModule,
+    PartnersModule,
     RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
