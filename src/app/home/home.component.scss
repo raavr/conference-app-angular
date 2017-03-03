@@ -19,6 +19,7 @@ $post-date-color: #085877;
     padding: calc(70px + 1rem) 0;
     color: $primary-header-color;
     height: 100vh;
+    max-height: 800px;
 
     .header-container {
         text-align: center;
