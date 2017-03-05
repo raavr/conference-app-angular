@@ -3,6 +3,7 @@
 
 $primary-header-color: #ffffff;
 $btn-more-bg: #158fcf;
+$about-bg: #ffffff;
 $speakers-bg: #e9eef0;
 $news-bg: #03060b;
 $cfp-bg: #eeeeee;
@@ -56,6 +57,7 @@ $post-date-color: #085877;
 }
 
 .app-about {
+    background-color: $about-bg;
     color: #000000;
     text-align: center;
 

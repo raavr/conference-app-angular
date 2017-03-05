@@ -11,9 +11,11 @@ import { Component, ViewEncapsulation } from '@angular/core';
     './app.component.scss'
   ],
   template: `
-    <navbar></navbar>
-    <router-outlet></router-outlet>
-    <app-footer></app-footer>
+    <div class="app-wrapper">
+      <navbar></navbar>
+      <router-outlet></router-outlet>
+      <app-footer></app-footer>
+    </div>
   `
 })
 export class AppComponent {

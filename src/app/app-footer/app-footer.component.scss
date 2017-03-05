@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/mixins/breakpoints";
 @import "~bootstrap/scss/variables";
+@import "../app.helpers";
 $footer-bg: #03060b;
 
 
@@ -8,6 +9,7 @@ $footer-bg: #03060b;
     padding: 40px 0;
     position: absolute;
     width: 100%;
+    @extend .max-wth;
 
     .footer-nav-list, .social-container {
         text-align: center;
