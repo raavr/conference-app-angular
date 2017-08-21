@@ -1,7 +1,7 @@
 {
   "name": "conference-app-angular2",
   "version": "1.0.0",
-  "description": "Conference App build with Angular and Webpack",
+  "description": "Conference App built with Angular, Bootstrap v4, Webpack, Jasmine",
   "keywords": [
     "angular2",
     "webpack",
