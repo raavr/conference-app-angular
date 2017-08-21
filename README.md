@@ -1,6 +1,8 @@
-# Conference app build with Angular 2 and Webpack
+# Conference App built with Angular 2 and Webpack
 
-An application using:
+Working example can be found here: https://raavr.github.io/conference-app-angular
+
+This app is built with:
 * [Angular] (http://www.angular.io/)
 * [Bootstrap v4] (https://v4-alpha.getbootstrap.com/)
 * [Sass] (http://sass-lang.com/)
