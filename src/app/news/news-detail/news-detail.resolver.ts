@@ -11,8 +11,7 @@ export class NewsDetailResolver implements Resolve<any> {
   constructor(private newsService: NewsService, private router: Router) {}
   
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<News> {
-    let id = route.params['id'];
-    
+    const id = route.params['id'];  
     return this.newsService.getSingleNews(+id);
     
   }

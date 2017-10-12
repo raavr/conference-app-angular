@@ -16,15 +16,10 @@ export class AgendaService {
     }
 
     private getDefaultCellsForSpecificTime(time: number, totalRooms: number): AgendaData[] {
-        let i = 1, 
-            ad: AgendaData[] = [];
-
-        while(i <= totalRooms) {
-            ad.push(new AgendaData(i, TD_TYPES[TD_TYPES.GAP].toLowerCase(), time))
-            i++;
-        }
-
-        return ad;
+        return Array.from(
+            {length: totalRooms}, 
+            (e, i) => new AgendaData(i+1, TD_TYPES[TD_TYPES.GAP].toLowerCase(), time)
+        );
     }
 
     private concatCellsWithDefaultOnes(arr: AgendaData[], totalRooms: number) {
@@ -56,35 +51,22 @@ export class AgendaService {
             .toArray();
     }
 
+    private createAgendaDay(agenda: AgendaDayApi): Observable<AgendaDay> {
+        return this.transformAgenda(agenda.agenda, agenda.totalRooms)
+                .map(agendaRow => new AgendaDay(agenda.day, agendaRow, agenda.totalRooms));
+                
+    }
+
     getAgenda(): Observable<AgendaDay[]> {
-         let day:string;
-         let totalRooms: number;
-         
-         return this.http.get("/assets/mock-data/mock-agenda.json")
+        return this.http.get("/assets/mock-data/mock-agenda.json")
             .map(res => res.json().agenda as AgendaDayApi[])
             .flatMap(res => Observable.from(res))
-            .flatMap(a => { 
-                day = a.day; 
-                totalRooms = a.totalRooms; 
-                return this.transformAgenda(a.agenda, a.totalRooms);
-            })
-            .map(agenda => new AgendaDay(day, agenda, totalRooms))
+            .flatMap(agenda => this.createAgendaDay(agenda))
             .toArray();
-            
-
     }
 
     createDaysNameArray(days: number): Observable<string[]> {
-        let daysArray: string[] = [], 
-            i = 1;
-        
-        while(i <= days) {
-            daysArray.push("day " + DAYS[i].toLowerCase());
-            i++;
-        }
-
-        return Observable.of(daysArray);
-        
+        return Observable.of(Array.from({length: days}, (e, i) => `day ${DAYS[i+1].toLowerCase()}`)); 
     }
 
 }

@@ -43,9 +43,4 @@ export class HomeComponent {
 
   }
 
-  
-
-
-
-
 }
