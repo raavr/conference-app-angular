@@ -16,8 +16,7 @@ export class NewsService {
     }
 
     getSingleNews(id: number) : Observable<News> {
-        return this.http.get("/assets/mock-data/mock-news.json")
-            .map(res => res.json().news as News[])
+        return this.getNews()
             .flatMap(ns => Observable.from(ns))
             .filter(ns => ns.id === id);
     }
