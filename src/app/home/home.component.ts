@@ -5,7 +5,7 @@ import { PartnerGroup } from '../partners/partner/partner-group';
 import { PartnerService } from '../partners/partner/partner.service';
 import { NewsService } from '../news/news/news.service';
 import { News } from '../news/news/news';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { MAX_PARTNERGROUP, MAX_SPEAKER_HOMEPAGE, MAX_NEWS_HOMEPAGE } from '../app.constant';
 
 @Component({
@@ -17,6 +17,7 @@ export class HomeComponent {
   speakers: Speaker[];
   news: News[];
   partnersGroups: PartnerGroup[];
+  private unsub$ = new Subject<void>();
 
   constructor(private speakerService: SpeakerService, 
               private partnerService: PartnerService, 
@@ -30,17 +31,25 @@ export class HomeComponent {
         .flatMap(ns => Observable.from(ns))
         .take(MAX_SPEAKER_HOMEPAGE)
         .toArray()
+        .takeUntil(this.unsub$)
         .subscribe(speakers => this.speakers = speakers);
 
     this.partnerService.getPartners(MAX_PARTNERGROUP.HOMEPAGE)
+        .takeUntil(this.unsub$)
         .subscribe(pg => this.partnersGroups = pg);
 
     this.newsService.getNews()
         .flatMap(ns => Observable.from(ns))
         .take(MAX_NEWS_HOMEPAGE)
         .toArray()
+        .takeUntil(this.unsub$)
         .subscribe(ns => this.news = ns);
 
+  }
+
+  ngOnDestroy() {
+    this.unsub$.next();
+    this.unsub$.complete();
   }
 
 }

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable, Subject } from 'rxjs';
 import { AgendaDay } from '../agenda/agenda-day';
 import { ActivatedRoute } from '@angular/router';
 import { AgendaModalService } from './agenda-modal.service';
@@ -16,6 +16,7 @@ export class FullAgendaComponent {
     daysName: string[];
     activeDay: number;
     selectedSpeaker: Speaker;
+    private unsub$ = new Subject();
 
     constructor(private route: ActivatedRoute, private agendaModalService: AgendaModalService) {
          
@@ -46,6 +47,14 @@ export class FullAgendaComponent {
 
         this.activeDay = 0;
         
-        this.agendaModalService.speakerSelected$.subscribe(speaker => this.selectedSpeaker = speaker);
+        this.agendaModalService
+            .speakerSelected$
+            .takeUntil(this.unsub$)
+            .subscribe(speaker => this.selectedSpeaker = speaker);
+    }
+
+    ngOnDestroy() {
+        this.unsub$.next();
+        this.unsub$.complete();
     }
 }
