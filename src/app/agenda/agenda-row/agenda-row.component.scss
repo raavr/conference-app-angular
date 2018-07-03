@@ -1,6 +1,7 @@
 @import "~bootstrap/scss/mixins/breakpoints";
 @import "~bootstrap/scss/variables";
 
+$rooms: 6;
 td {
     display: block;
     border: none;
@@ -28,33 +29,15 @@ td {
         font-size: 1.4rem;   
     }
 
-    &.presentation-2:before {
-        content: "Room 2";
-    }
+    @for $room from 1 through $rooms {
+        &.presentation-#{$room}:before {
+            content: "Room #{$room}";
+        }
 
-    &.presentation-1:before {
-        content: "Room 1";
-    }
-
-    &.presentation-3:before {
-        content: "Room 3";
-    }
-    
-    &.presentation-4:before {
-        content: "Room 4";
-    }
-
-    &.presentation-5:before {
-        content: "Room 5";
-    }
-    
-    &.presentation-6:before {
-        content: "Room 6";
-    }
-
-    @include media-breakpoint-up(md) {
-        &.presentation-1:before, &.presentation-2:before, &.presentation-3:before, &.presentation-4:before, &.presentation-5:before, &.presentation-6:before{
-            content: "";
+        @include media-breakpoint-up(md) {
+            &.presentation-#{$room}:before {
+                content: "";
+            }
         }
     }
 
@@ -65,14 +48,16 @@ td {
     }
 }
 
-.gap-1, .presentation-1, .gap-2, .presentation-2, .gap-3, .presentation-3, .gap-4, .presentation-4, .gap-5, .presentation-5, .gap-6, .presentation-6 {
-    display: none;
+@for $room from 1 through $rooms {
+    .gap-#{$room}, .presentation-#{$room} {
+        display: none;
 
-    &.active {
-        display: block;
+        &.active {
+            display: block;
 
-        @include media-breakpoint-up(md) {
-            display: table-cell;
+            @include media-breakpoint-up(md) {
+                display: table-cell;
+            }
         }
     }
 }
@@ -87,7 +72,6 @@ td {
             display: table-cell;
         }
      }
-
 }
 
 

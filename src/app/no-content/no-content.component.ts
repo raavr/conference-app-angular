@@ -4,9 +4,9 @@ import { Component } from '@angular/core';
   selector: 'no-content',
   styles: [`
       .no-content {
-          margin-top: calc(70px + 1rem); 
+          margin-top: 80px; 
           background-color: #eee; 
-          min-height: 500px; 
+          min-height: 100%; 
           display: flex; 
           justify-content: center; 
           align-items: center;

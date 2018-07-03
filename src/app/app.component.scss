@@ -2,7 +2,6 @@
 @import "~bootstrap/scss/bootstrap-grid";
 @import "~bootstrap/scss/mixins/breakpoints";
 @import "~bootstrap/scss/variables";
-@import "app.helpers";
 
 $fa-font-path: "../assets/font-awesome/fonts";
 @import "~font-awesome/scss/font-awesome";
@@ -25,7 +24,12 @@ body {
 }
 
 .app-wrapper {
-  @extend .max-wth;
+  padding-bottom: 200px;
+  height: calc(100vh - 80px);
+}
+
+.app-content {
+  height: 100%;
 }
 
 .app-section {
@@ -40,8 +44,8 @@ body {
 }
 
 .app-section-description {
-    font-size: 2rem;
-    margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .text-dark {
@@ -57,17 +61,17 @@ body {
 }
 
 .visible-xs-inline {
-    display: inline-block;
+  display: inline-block;
 
-     @include media-breakpoint-up(md) {
-       display: none;
-     }
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
 }
 
 .clear-fix::after, .clear-fix::before {
-    display: table;
-    clear: both;
-    content: "";
+  display: table;
+  clear: both;
+  content: "";
 }
 
 .col-center {
@@ -78,6 +82,6 @@ body {
 .route-section {
   margin-top: 80px;
   padding: 50px 0;
-  min-height: 500px;
+  min-height: 100%;
   background-color: #ffffff;
 }

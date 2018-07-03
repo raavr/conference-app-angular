@@ -1,7 +1,6 @@
 @import "~bootstrap/scss/mixins/clearfix";
 @import "~bootstrap/scss/mixins/breakpoints";
 @import "~bootstrap/scss/variables";
-@import "../app.helpers";
 
 $navbar-bg: #ffffff;
 
@@ -9,7 +8,6 @@ $navbar-bg: #ffffff;
     background-color: $navbar-bg;
     font-size: 2rem;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    @extend .max-wth;
 }
 
 .nav-container {
