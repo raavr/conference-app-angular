@@ -62,6 +62,8 @@ declare var ENV: string;
 declare var HMR: boolean;
 declare var System: SystemJS;
 
+declare var jQuery: any;
+
 interface JQuery {
   collapse(command: string): JQuery;
 }
