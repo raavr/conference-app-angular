@@ -13,54 +13,46 @@ import { SpeakerItemComponent } from './speaker-item.component';
 
 describe("SpeakerItem", () => {
 
-    let comp:            SpeakerItemComponent;
-    let fixture:         ComponentFixture<SpeakerItemComponent>;
-    let de:              DebugElement;
-    let el:              HTMLElement;
-    let expectedSpeaker: Speaker;
+  let comp: SpeakerItemComponent;
+  let fixture: ComponentFixture<SpeakerItemComponent>;
+  let de: DebugElement;
+  let el: HTMLElement;
+  let expectedSpeaker: Speaker;
 
-    beforeEach(async(() => {
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [SpeakerItemComponent]
+    }).compileComponents()
+  }));
 
-        TestBed.configureTestingModule({
-            declarations: [ SpeakerItemComponent ]
-        }).compileComponents()
-    }));
-    
-    beforeEach(() => {
+  beforeEach(() => {
+    fixture = TestBed.createComponent(SpeakerItemComponent);
+    comp = fixture.componentInstance;
 
-        fixture = TestBed.createComponent(SpeakerItemComponent);
-        comp = fixture.componentInstance;
+    expectedSpeaker = {
+      id: 1,
+      name: "Test",
+      surname: "Testy",
+      company: "Test Corp",
+      img: "speaker-1",
+      desc: "Lorem ipsum"
+    };
+  });
 
-        expectedSpeaker = { 
-            id: 1, 
-            name: "Test", 
-            surname: "Testy", 
-            company: "Test Corp", 
-            img: "speaker-1", 
-            desc: "Lorem ipsum"
-        };
-    
-    });
+  it('should initially not show a speaker', () => {
+    fixture.detectChanges();
+    de = fixture.debugElement.query(By.css('.speaker-item'));
 
-    it('should initially not show a speaker', () => {
+    expect(de).toEqual(null);
+  });
 
-        fixture.detectChanges();
-        de = fixture.debugElement.query(By.css('.speaker-item'));
+  it('should show speaker name', () => {
+    comp.speaker = expectedSpeaker;
+    fixture.detectChanges();
 
-        expect(de).toEqual(null);
-        
-    });
+    de = fixture.debugElement.query(By.css('.speaker-name'));
+    el = de.nativeElement;
 
-    it('should show speaker name', () => {
-
-        comp.speaker = expectedSpeaker;
-        fixture.detectChanges();
-
-        de = fixture.debugElement.query(By.css('.speaker-name'));
-        el = de.nativeElement;
-
-        expect(el.textContent).toContain(expectedSpeaker.name + " " + expectedSpeaker.surname);
-        
-    });
-
+    expect(el.textContent).toContain(expectedSpeaker.name + " " + expectedSpeaker.surname);
+  });
 });

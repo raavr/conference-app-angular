@@ -13,122 +13,119 @@ $post-title-color: #085877;
 $post-date-color: #085877;
 
 .app-header {
-    background-image: url(../../assets/img/bg-header.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: calc(70px + 1rem) 0;
-    color: $primary-header-color;
-    height: 100vh;
-    max-height: 800px;
+  background-image: url(../../assets/img/bg-header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: calc(70px + 1rem) 0;
+  color: $primary-header-color;
+  height: 100vh;
+  max-height: 800px;
 
-    .header-container {
-        text-align: center;
-        margin-top: 180px;
+  .header-container {
+    text-align: center;
+    margin-top: 180px;
 
-        @include media-breakpoint-up(sm) {
-            text-align: left;
-        }
-
-        .app-title {
-            font-size: 5.2rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-
-            @include media-breakpoint-up(sm) {
-                font-size: 6rem;
-            }
-        }
-
-        .app-description {
-            font-size: 2rem;
-            margin-bottom: 40px;
-        }
+    @include media-breakpoint-up(sm) {
+      text-align: left;
     }
+
+    .app-title {
+      font-size: 5.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+
+      @include media-breakpoint-up(sm) {
+        font-size: 6rem;
+      }
+    }
+
+    .app-description {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .btn-more {
-    background-color: $btn-more-bg;
-    width: 250px;
-    height: 60px;
-    font-size: 2.4rem;
-    line-height: 2.4rem;
-    color: $primary-header-color;
+  background-color: $btn-more-bg;
+  width: 250px;
+  height: 60px;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+  color: $primary-header-color;
 }
 
 .app-about {
-    background-color: $about-bg;
-    color: #000000;
-    text-align: center;
+  background-color: $about-bg;
+  color: #000000;
+  text-align: center;
 
-    .col-about {
-        margin-top: 50px;
-        
-        .conf-date {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
+  .col-about {
+    margin-top: 50px;
 
+    .conf-date {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      font-weight: 700;
     }
+  }
 }
 
 .app-speakers {
-    background-color: $speakers-bg;
-    text-align: center;
+  background-color: $speakers-bg;
+  text-align: center;
 
-    .btn-more {
-        margin-top: 50px;
-    }
+  .btn-more {
+    margin-top: 50px;
+  }
 }
 
 .app-news {
-    background-color: $news-bg;
+  background-color: $news-bg;
 
-    .post {
-        background-color: $post-bg;
-        padding: 25px;
-        margin-bottom: 25px;
-
-        @include media-breakpoint-up(lg) {
-            margin-bottom: 0;
-        }
+  .post {
+    background-color: $post-bg;
+    padding: 25px;
+    margin-bottom: 25px;
+    
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
     }
+  }
+  .post-title {
+    font-size: 2.3rem;
+    padding-bottom: 5px;
+    margin: 0;
 
-    .post-title {
-        font-size: 2.3rem;
-        padding-bottom: 5px;
-        margin: 0;
-
-        a {
-            color: $post-title-color;
-        }
+    a {
+      color: $post-title-color;
     }
+  }
 
-    .post-date {
-        text-transform: uppercase;
-        font-size: 1.2rem;
-        margin-bottom: 15px;
-        color: $post-date-color;
-        display: block;
-    }
+  .post-date {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: $post-date-color;
+    display: block;
+  }
 
-    .post-more {
-        text-decoration: underline;
-        color: $post-title-color;
-    }
+  .post-more {
+    text-decoration: underline;
+    color: $post-title-color;
+  }
 }
 
 .app-cfp {
-    background-color: $cfp-bg;
-    text-align: center;   
+  background-color: $cfp-bg;
+  text-align: center;
 }
 
 .app-partners {
-    background-color: $partners-bg;
-
-    .btn-more {
-        margin-top: 50px;
-    }
-
+  background-color: $partners-bg;
+  
+  .btn-more {
+    margin-top: 50px;
+  }
 }

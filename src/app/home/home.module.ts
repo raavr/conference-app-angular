@@ -7,16 +7,16 @@ import { SpeakersModule } from '../speakers';
 import { NewsModule } from '../news';
 
 @NgModule({
-    imports: [ 
-        CommonModule, 
-        HomeRoutingModule,
-        PartnersModule,
-        SpeakersModule,
-        NewsModule
-    ],
-    declarations: [
-        HomeComponent
-    ]
+  imports: [
+    CommonModule,
+    HomeRoutingModule,
+    PartnersModule,
+    SpeakersModule,
+    NewsModule
+  ],
+  declarations: [
+    HomeComponent
+  ]
 })
 export class HomeModule {
 

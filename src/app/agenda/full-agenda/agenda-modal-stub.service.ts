@@ -14,5 +14,4 @@ export class AgendaModalStub {
     this._testSelectedSpeaker = selectedSpeaker;
     this.subject.next(selectedSpeaker);
   }
-
 }

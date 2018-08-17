@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Router, Resolve, RouterStateSnapshot,
-         ActivatedRouteSnapshot } from '@angular/router';
+import { 
+  Router, 
+  Resolve, 
+  RouterStateSnapshot,
+  ActivatedRouteSnapshot 
+} from '@angular/router';
 
 import { SpeakerService } from '../speaker/speaker.service';
 import { Speaker } from '../speaker/speaker';

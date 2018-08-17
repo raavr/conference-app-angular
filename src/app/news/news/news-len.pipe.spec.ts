@@ -2,7 +2,7 @@ import { MaxLenPipe } from './news-len.pipe';
 
 describe('MaxLenPipe', () => {
 
-  let pipe = new MaxLenPipe();
+  const pipe = new MaxLenPipe();
   const maxLen = 15;
 
   it('leaves "lorem ipsum" unchanged', () => {
@@ -18,7 +18,7 @@ describe('MaxLenPipe', () => {
   });
 
   it('transforms "a" to "..."', () => {
-    let maxLen = 0;
+    const maxLen = 0;
     expect(pipe.transform('a', maxLen)).toBe('...');
   })
 

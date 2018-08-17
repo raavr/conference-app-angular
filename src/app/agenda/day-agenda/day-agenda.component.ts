@@ -4,43 +4,43 @@ import { AgendaDay } from '../agenda/agenda-day';
 
 @Component({
   selector: 'day-agenda',
-  styleUrls: [ './day-agenda.component.scss' ],
+  styleUrls: ['./day-agenda.component.scss'],
   templateUrl: './day-agenda.component.html'
 })
 export class DayAgendaComponent {
-    @Input() agendaRows: AgendaDay;
-    rooms: number[] = [];
-    activeRooms: number[] = [];
-    @Input() isActive: boolean;
+  @Input() agendaRows: AgendaDay;
+  @Input() isActive: boolean;
+  rooms: number[] = [];
+  activeRooms: number[] = [];
 
-    isRoomActive(room: number) {
-        return this.activeRooms.indexOf(room) !== -1;
+  isRoomActive(room: number) {
+    return this.activeRooms.indexOf(room) !== -1;
+  }
+
+  toggleRoomActive(room: number) {
+    if (this.isRoomActive(room)) {
+      this.activeRooms.splice(this.activeRooms.indexOf(room), 1);
+    } else {
+      this.activeRooms.push(room);
+    }
+  }
+
+  computeTHWidth(): string {
+    if (!this.activeRooms.length) {
+      return "0%";
     }
 
-    toggleRoomActive(room: number) {
-        if(this.isRoomActive(room)) {
-            this.activeRooms.splice(this.activeRooms.indexOf(room), 1);
-        } else {
-            this.activeRooms.push(room);
-        }
-    }
+    return Math.round(100 / this.activeRooms.length) + "%";
+  }
 
-    computeTHWidth(): string {
-        if(!this.activeRooms.length) {
-            return "0%";
-        }
-
-        return Math.round(100 / this.activeRooms.length) + "%";
+  private fillRoomsArray() {
+    for (let i = 1; i <= this.agendaRows.totalRooms; i++) {
+      this.rooms.push(i);
     }
+  }
 
-    private fillRoomsArray() {
-        for(let i = 1; i <= this.agendaRows.totalRooms; i++) {
-            this.rooms.push(i);
-        }
-    }
-
-    ngOnInit() {
-        this.fillRoomsArray();
-        this.activeRooms = this.activeRooms.concat(this.rooms);
-    }
+  ngOnInit() {
+    this.fillRoomsArray();
+    this.activeRooms = this.activeRooms.concat(this.rooms);
+  }
 }

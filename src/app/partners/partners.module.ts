@@ -4,14 +4,17 @@ import { PartnerGroupComponent, PartnerListComponent } from './';
 import { PartnersRoutingModule } from './partners-routing.module';
 
 @NgModule({
-    imports: [ CommonModule, PartnersRoutingModule ],
-    declarations: [
-        PartnerGroupComponent,
-        PartnerListComponent
-    ],
-    exports: [ 
-       PartnerGroupComponent
-    ]
+  imports: [
+    CommonModule, 
+    PartnersRoutingModule
+  ],
+  declarations: [
+    PartnerGroupComponent,
+    PartnerListComponent
+  ],
+  exports: [
+    PartnerGroupComponent
+  ]
 })
 export class PartnersModule {
 

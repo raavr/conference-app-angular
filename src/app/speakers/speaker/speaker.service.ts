@@ -6,13 +6,12 @@ import { Observable } from 'rxjs/Observable';
 @Injectable()
 export class SpeakerService {
 
-    constructor(public http: Http) {
+  constructor(public http: Http) {
 
-    }
+  }
 
-    getSpeakers(): Observable<Speaker[]> {
-        return this.http.get("/assets/mock-data/mock-speakers.json")
-            .map(res => res.json().speakers as Speaker[]);
-    }
-
+  getSpeakers(): Observable<Speaker[]> {
+    return this.http.get("/assets/mock-data/mock-speakers.json")
+      .map(res => res.json().speakers as Speaker[]);
+  }
 }

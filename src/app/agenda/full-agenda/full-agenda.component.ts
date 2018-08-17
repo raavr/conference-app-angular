@@ -7,54 +7,55 @@ import { Speaker } from '../../speakers/speaker/speaker';
 
 @Component({
   selector: 'full-agenda',
-  styleUrls: [ './full-agenda.component.scss' ],
+  styleUrls: ['./full-agenda.component.scss'],
   templateUrl: './full-agenda.component.html',
-  providers: [ AgendaModalService ]
+  providers: [AgendaModalService]
 })
 export class FullAgendaComponent {
-    agenda: AgendaDay[];
-    daysName: string[];
-    activeDay: number;
-    selectedSpeaker: Speaker;
-    private unsub$ = new Subject();
+  agenda: AgendaDay[];
+  daysName: string[];
+  activeDay: number;
+  selectedSpeaker: Speaker;
+  private unsub$ = new Subject();
 
-    constructor(private route: ActivatedRoute, private agendaModalService: AgendaModalService) {
-         
+  constructor(
+    private route: ActivatedRoute, 
+    private agendaModalService: AgendaModalService
+  ) { }
+
+  computeDayNameWidth(): string {
+    if (!this.daysName.length) {
+      return '0%';
     }
 
-    computeDayNameWidth(): string {
-        if(!this.daysName.length) {
-            return '0%';
-        }
+    return Math.floor(100 / this.daysName.length) + '%';
+  }
 
-        return Math.floor(100 / this.daysName.length) + '%';
-    }
+  isActive(day: number) {
+    return this.activeDay === day;
+  }
 
-    isActive(day: number) {
-        return this.activeDay === day; 
-    }
+  setDayActive(index: number) {
+    this.activeDay = index;
+  }
 
-    setDayActive(index: number) {
-        this.activeDay = index;
-    }
+  ngOnInit() {
+    this.route.data
+      .subscribe((data: { agenda: [AgendaDay[], string[]] }) => {
+        this.agenda = data.agenda[0];
+        this.daysName = data.agenda[1];
+      });
 
-    ngOnInit() {
-        this.route.data
-            .subscribe((data: { agenda: [AgendaDay[], string[]] }) => {
-                this.agenda = data.agenda[0];
-                this.daysName = data.agenda[1];
-            });
+    this.activeDay = 0;
 
-        this.activeDay = 0;
-        
-        this.agendaModalService
-            .speakerSelected$
-            .takeUntil(this.unsub$)
-            .subscribe(speaker => this.selectedSpeaker = speaker);
-    }
+    this.agendaModalService
+      .speakerSelected$
+      .takeUntil(this.unsub$)
+      .subscribe(speaker => this.selectedSpeaker = speaker);
+  }
 
-    ngOnDestroy() {
-        this.unsub$.next();
-        this.unsub$.complete();
-    }
+  ngOnDestroy() {
+    this.unsub$.next();
+    this.unsub$.complete();
+  }
 }

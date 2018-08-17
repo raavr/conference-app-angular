@@ -3,22 +3,21 @@ import { News } from '../news/news';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-    selector: 'news-detail',
-    styleUrls: ['./news-detail.component.scss'],
-    templateUrl: './news-detail.component.html'
+  selector: 'news-detail',
+  styleUrls: ['./news-detail.component.scss'],
+  templateUrl: './news-detail.component.html'
 })
 export class NewsDetailComponent {
-    news: News;
+  news: News;
 
-    constructor(private route: ActivatedRoute) {
+  constructor(private route: ActivatedRoute) {
 
-    }
+  }
 
-    ngOnInit() {
-
-        this.route.data
-            .subscribe((data: { news: News }) => {
-                this.news = data.news;
-            });
-        }
+  ngOnInit() {
+    this.route.data
+      .subscribe((data: { news: News }) => {
+        this.news = data.news;
+      });
+  }
 }

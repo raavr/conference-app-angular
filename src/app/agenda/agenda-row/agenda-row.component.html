@@ -1,8 +1,7 @@
-<td class="time"><div class="visible-xs-inline">Starts at&nbsp;</div>{{row.time | date:'HH:mm'}}</td>
-<td *ngFor="let cell of row.sessions" 
-    [colSpan]="getColspan(cell)"
-    [class]="getTdClass(cell)"
-    [class.active]="isRoomActive(cell.room)"
-    agenda-cell
-    [cell]="cell">
+<td class="time">
+  <div class="visible-xs-inline">Starts at&nbsp;</div>
+  {{row.time | date:'HH:mm'}}
+</td>
+<td *ngFor="let cell of row.sessions" [colSpan]="getColspan(cell)" [class]="getTdClass(cell)" [class.active]="isRoomActive(cell.room)"
+  agenda-cell [cell]="cell">
 </td>

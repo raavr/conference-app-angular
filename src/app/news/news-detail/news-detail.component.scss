@@ -2,29 +2,28 @@
 @import "~bootstrap/scss/variables";
 
 .news-section {
-    background-color: #e9eef0;
-    padding: 0;
+  background-color: #e9eef0;
+  padding: 0;
 
-    .news-container, .news-container > .row, .news-separator {
-
-            @include media-breakpoint-up(md) {
-                min-height: 500px;
-            }
-        
+  .news-container,
+  .news-container>.row,
+  .news-separator {
+    @include media-breakpoint-up(md) {
+      min-height: 500px;
     }
+  }
 
-    .news-separator {
-        border-bottom: 1px solid #e2e2e2;
-        border-right: none;
+  .news-separator {
+    border-bottom: 1px solid #e2e2e2;
+    border-right: none;
 
-        @include media-breakpoint-up(md) {
-            border-right: 1px solid #e2e2e2;
-            border-bottom: none;
-        }
+    @include media-breakpoint-up(md) {
+      border-right: 1px solid #e2e2e2;
+      border-bottom: none;
     }
-
-    .posts-wrapper {
-        padding-top: 50px;
-    }
-
+  }
+  
+  .posts-wrapper {
+    padding-top: 50px;
+  }
 }

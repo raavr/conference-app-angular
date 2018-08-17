@@ -5,14 +5,14 @@ import { PresentationListComponent } from './';
 import { PresentationsRoutingModule } from './presentations-routing.module';
 
 @NgModule({
-    imports: [ 
-        CommonModule, 
-        SpeakersModule,
-        PresentationsRoutingModule
-    ],
-    declarations: [
-        PresentationListComponent, 
-    ]
+  imports: [
+    CommonModule,
+    SpeakersModule,
+    PresentationsRoutingModule
+  ],
+  declarations: [
+    PresentationListComponent,
+  ]
 })
 export class PresentationsModule {
 

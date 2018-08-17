@@ -1,103 +1,97 @@
 @import "~bootstrap/scss/mixins/breakpoints";
 @import "~bootstrap/scss/variables";
-
 $rooms: 6;
+
 td {
-    display: block;
-    border: none;
-    border-bottom: 1px solid #FFF;
-    position: relative;
-    padding-left: 30%;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    font-weight: 300;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #FFF;
+  position: relative;
+  padding-left: 30%;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-weight: 300;
+
+  @include media-breakpoint-up(md) {
+    border: 1px solid #ffffff;
+    padding: 10px 10px;
+    vertical-align: top;
+    display: table-cell;
+  }
+
+  &:before {
+    position: absolute;
+    top: 4px;
+    left: 6px;
+    width: 25%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-size: 1.4rem;
+  }
+
+  @for $room from 1 through $rooms {
+    &.presentation-#{$room}:before {
+      content: "Room #{$room}";
+    }
 
     @include media-breakpoint-up(md) {
-        border: 1px solid #ffffff;
-        padding: 10px 10px;
-        vertical-align: top;
-        display: table-cell;
+      &.presentation-#{$room}:before {
+        content: "";
+      }
     }
+  }
 
-    &:before {
-        position: absolute;
-        top: 4px;
-        left: 6px;
-        width: 25%;
-        padding-right: 10px;
-        white-space: nowrap;     
-        font-size: 1.4rem;   
-    }
-
-    @for $room from 1 through $rooms {
-        &.presentation-#{$room}:before {
-            content: "Room #{$room}";
-        }
-
-        @include media-breakpoint-up(md) {
-            &.presentation-#{$room}:before {
-                content: "";
-            }
-        }
-    }
-
-    &.time, &.general {
-        background-color: #eeeeee;
-        font-size: 1.6rem;
-        padding-left: 6px;
-    }
+  &.time,
+  &.general {
+    background-color: #eeeeee;
+    font-size: 1.6rem;
+    padding-left: 6px;
+  }
 }
 
 @for $room from 1 through $rooms {
-    .gap-#{$room}, .presentation-#{$room} {
-        display: none;
+  .gap-#{$room},
+  .presentation-#{$room} {
+    display: none;
 
-        &.active {
-            display: block;
+    &.active {
+      display: block;
 
-            @include media-breakpoint-up(md) {
-                display: table-cell;
-            }
-        }
+      @include media-breakpoint-up(md) {
+        display: table-cell;
+      }
     }
+  }
 }
 
 .gap {
-    background-color: #FFF;
+  background-color: #FFF;
 
-     &.active {
-         display: none;
-
-        @include media-breakpoint-up(md) {
-            display: table-cell;
-        }
-     }
+  &.active {
+    display: none;
+    
+    @include media-breakpoint-up(md) {
+      display: table-cell;
+    }
+  }
 }
-
-
-
-
 
 // .presentation-5, .gap-5 {
 //     background-color: #9B72FF;
 //     color: #FFF;
 // }
-
 // .presentation-4, .gap-4 {
 //     background-color: #DEBC00;
 //     color: #FFF;
 // }
-
 // .presentation-3, .gap-3 {
 //     background-color: #FF5858;
 //     color: #FFF;
 // }
-
 // .presentation-2, .gap-2 {
 //     background-color: #0994D9;
 //     color: #FFF;
 // }
-
 // .presentation-1, .gap-1 {
 //     background-color: #00BE9E;
 //     color: #FFF;

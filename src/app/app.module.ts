@@ -48,7 +48,10 @@ const APP_PROVIDERS = [
     HomeModule,
     NewsModule,
     AgendaModule,
-    RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules }),
+    RouterModule.forRoot(ROUTES, { 
+      useHash: true, 
+      preloadingStrategy: PreloadAllModules 
+    }),
   ],
   providers: [
     ENV_PROVIDERS,

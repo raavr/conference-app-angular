@@ -6,18 +6,20 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'partner-list',
-  styleUrls: [ './partner-list.component.scss' ],
+  styleUrls: ['./partner-list.component.scss'],
   templateUrl: './partner-list.component.html'
 })
 export class PartnerListComponent {
-    partnersGroups: PartnerGroup[];
+  partnersGroups: PartnerGroup[];
 
-    constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(private router: Router, private route: ActivatedRoute) {
 
-    }
-    
-    ngOnInit() {
-        this.route.data
-            .subscribe((data: { partners: PartnerGroup[] }) => this.partnersGroups = data.partners);
-    }
+  }
+
+  ngOnInit() {
+    this.route.data
+      .subscribe((data: { partners: PartnerGroup[] }) => (
+        this.partnersGroups = data.partners
+      ));
+  }
 }

@@ -1,22 +1,16 @@
 <div class="all" *ngIf="cell.type === 'general'">{{cell.title}}</div>
 <div *ngIf="cell.type === 'presentation'" [class]="cell.type + '-' + cell.room">
-    <div class="visible-xs-inline time-period">{{cell.timeStart | date:'HH:mm'}} - {{cell.timeEnd | date:'HH:mm'}}</div>
-    <div class="agenda-session">
-        <h3>{{cell.title}}</h3>
-        <p>
-            <span *ngFor="let speaker of cell.speakers; let i = index">{{speaker.name}} {{speaker.surname}}
-                <span *ngIf="i !== (cell.speakers.length - 1)">, </span>
-            </span>
-        </p>
-        <p class="clearfix">
-            <img *ngFor="let speaker of cell.speakers" 
-                    (click)="selectSpeaker(speaker)" 
-                    data-toggle="modal" 
-                    data-target="#speakerModal"
-                    class="speaker-thumb" 
-                    [src]="'../../assets/img/' + speaker.img + '.jpg'" 
-                    alt="{{speaker.name}} {{speaker.surname}}">
-        </p>
-    </div>
+  <div class="visible-xs-inline time-period">{{cell.timeStart | date:'HH:mm'}} - {{cell.timeEnd | date:'HH:mm'}}</div>
+  <div class="agenda-session">
+    <h3>{{cell.title}}</h3>
+    <p>
+      <span *ngFor="let speaker of cell.speakers; let i = index">{{speaker.name}} {{speaker.surname}}
+        <span *ngIf="i !== (cell.speakers.length - 1)">, </span>
+      </span>
+    </p>
+    <p class="clearfix">
+      <img *ngFor="let speaker of cell.speakers" (click)="selectSpeaker(speaker)" data-toggle="modal" data-target="#speakerModal"
+        class="speaker-thumb" [src]="'../../assets/img/' + speaker.img + '.jpg'" alt="{{speaker.name}} {{speaker.surname}}">
+    </p>
+  </div>
 </div>
-

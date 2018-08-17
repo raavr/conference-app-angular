@@ -2,28 +2,27 @@ $post-title-color: #085877;
 $post-date-color: #085877;
 
 .post-container {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .post-title {
-    font-size: 4.3rem;
-    padding-bottom: 5px;
-    margin: 0;
+  font-size: 4.3rem;
+  padding-bottom: 5px;
+  margin: 0;
+  color: $post-title-color;
+  a {
     color: $post-title-color;
-    
-    a {
-        color: $post-title-color;
-    }
+  }
 }
 
 .post-date {
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    color: $post-date-color;
-    display: block;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: $post-date-color;
+  display: block;
 }
 
 .post-content {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }

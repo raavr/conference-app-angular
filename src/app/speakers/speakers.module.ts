@@ -4,16 +4,19 @@ import { SpeakerModalComponent, SpeakerListComponent, SpeakerItemComponent } fro
 import { SpeakersRoutingModule } from './speakers-routing.module';
 
 @NgModule({
-    imports: [ CommonModule, SpeakersRoutingModule ],
-    declarations: [
-        SpeakerItemComponent, 
-        SpeakerListComponent, 
-        SpeakerModalComponent
-    ],
-    exports: [ 
-        SpeakerItemComponent, 
-        SpeakerModalComponent
-    ]
+  imports: [
+    CommonModule, 
+    SpeakersRoutingModule
+  ],
+  declarations: [
+    SpeakerItemComponent,
+    SpeakerListComponent,
+    SpeakerModalComponent
+  ],
+  exports: [
+    SpeakerItemComponent,
+    SpeakerModalComponent
+  ]
 })
 export class SpeakersModule {
 

@@ -16,5 +16,4 @@ export class AgendaCellComponent {
   selectSpeaker(speaker: Speaker): void {
     this.agendaModalService.selectSpeaker(speaker);
   }
-
 }

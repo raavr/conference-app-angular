@@ -1,30 +1,30 @@
 <section *ngIf="presentations" class="route-section presentation-list-section">
-    <div class="container">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="app-section-title text-dark">Presentations</h2>
+      </div>
+      <article class="col-sm-12 presentation-item" *ngFor="let presentation of presentations">
         <div class="row">
-            <div class="col-xs-12">
-                <h2 class="app-section-title text-dark">Presentations</h2>
+          <div class="col-xs-12 col-md-8 col-lg-9">
+            <div class="presentation-container">
+              <h3 class="presentation-title">{{presentation.title}}</h3>
+              <p class="presentation-meta">
+                <time class="presentation-datetime" [attr.datetime]="presentation.day + ', ' + (presentation.timeStart  | date:'HH:mm') + '-' + (presentation.timeEnd  | date:'HH:mm')">
+                  <span class="presentation-day">{{presentation.day}}</span>
+                  <span class="presentation-time">at {{presentation.timeStart | date:'HH:mm'}} to {{presentation.timeEnd | date:'HH:mm'}}</span>
+                </time>
+                <span class="presentation-room">Room {{presentation.room}}</span>
+              </p>
+              <p class="presentation-desc">{{presentation.description}}</p>
             </div>
-            <article class="col-sm-12 presentation-item" *ngFor="let presentation of presentations">
-                <div class="row">
-                    <div class="col-xs-12 col-md-8 col-lg-9">
-                        <div class="presentation-container">
-                            <h3 class="presentation-title">{{presentation.title}}</h3>
-                            <p class="presentation-meta">
-                                <time class="presentation-datetime" [attr.datetime]="presentation.day + ', ' + (presentation.timeStart  | date:'HH:mm') + '-' + (presentation.timeEnd  | date:'HH:mm')">
-                                    <span class="presentation-day">{{presentation.day}}</span>
-                                    <span class="presentation-time">at {{presentation.timeStart | date:'HH:mm'}} to {{presentation.timeEnd | date:'HH:mm'}}</span>
-                                </time>
-                                <span class="presentation-room">Room {{presentation.room}}</span>
-                            </p>
-                            <p class="presentation-desc">{{presentation.description}}</p>
-                        </div>  
-                    </div>
-                    <div class="col-xs-12 col-md-4 col-lg-3">
-                        <speaker-item *ngFor="let speaker of presentation.speakers" [speaker]="speaker" (click)="selectSpeaker(speaker)"></speaker-item>
-                    </div>
-                </div>
-            </article>
+          </div>
+          <div class="col-xs-12 col-md-4 col-lg-3">
+            <speaker-item *ngFor="let speaker of presentation.speakers" [speaker]="speaker" (click)="selectSpeaker(speaker)"></speaker-item>
+          </div>
         </div>
-        <speaker-modal [speaker]="selectedSpeaker"></speaker-modal>
+      </article>
     </div>
+    <speaker-modal [speaker]="selectedSpeaker"></speaker-modal>
+  </div>
 </section>
