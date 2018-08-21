@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { AgendaService } from './agenda/agenda.service';
 import { AgendaResolver } from './full-agenda/full-agenda.resolver';
 import { FullAgendaComponent } from './';
 
@@ -8,7 +7,7 @@ import { FullAgendaComponent } from './';
   imports: [
     RouterModule.forChild([
       { 
-        path: 'agenda', 
+        path: '', 
         component: FullAgendaComponent, 
         resolve: { 
           agenda: AgendaResolver 
@@ -17,10 +16,7 @@ import { FullAgendaComponent } from './';
     ])
   ],
   exports: [RouterModule],
-  providers: [
-    AgendaService, 
-    AgendaResolver
-  ]
+  providers: [AgendaResolver]
 })
 export class AgendaRoutingModule {
 

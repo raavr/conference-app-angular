@@ -1,21 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SpeakerModalComponent, SpeakerListComponent, SpeakerItemComponent } from './';
+import { SpeakerListComponent } from './';
 import { SpeakersRoutingModule } from './speakers-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule, 
+    SharedModule,
     SpeakersRoutingModule
   ],
   declarations: [
-    SpeakerItemComponent,
     SpeakerListComponent,
-    SpeakerModalComponent
-  ],
-  exports: [
-    SpeakerItemComponent,
-    SpeakerModalComponent
   ]
 })
 export class SpeakersModule {

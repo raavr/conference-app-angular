@@ -6,10 +6,10 @@ import {
 } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { Component, DebugElement } from '@angular/core';
-import { Speaker } from '../speaker/speaker';
 
 // Load the implementations that should be tested
 import { SpeakerItemComponent } from './speaker-item.component';
+import { Speaker } from '../../speakers/speaker/speaker';
 
 describe("SpeakerItem", () => {
 

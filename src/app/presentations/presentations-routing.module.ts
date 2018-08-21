@@ -2,13 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { PresentationListComponent } from './';
 import { PresentationListResolver } from './presentation-list/presentation-list.resolver';
-import { PresentationService } from './presentation/presentation.service';
 
 @NgModule({
   imports: [
     RouterModule.forChild([
       { 
-        path: 'presentations', 
+        path: '', 
         component: PresentationListComponent, 
         resolve: { 
           presentations: PresentationListResolver 
@@ -17,10 +16,7 @@ import { PresentationService } from './presentation/presentation.service';
     ])
   ],
   exports: [RouterModule],
-  providers: [
-    PresentationService, 
-    PresentationListResolver
-  ]
+  providers: [PresentationListResolver]
 })
 export class PresentationsRoutingModule {
 

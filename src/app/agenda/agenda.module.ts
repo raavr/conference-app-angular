@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { 
   AgendaCellComponent, 
   AgendaRowComponent, 
@@ -7,19 +6,22 @@ import {
   FullAgendaComponent 
 } from './';
 import { AgendaRoutingModule } from './agenda-routing.module';
-import { SpeakersModule } from '../speakers';
+import { AgendaService } from './agenda/agenda.service';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule,
-    AgendaRoutingModule,
-    SpeakersModule
+    SharedModule,
+    AgendaRoutingModule
   ],
   declarations: [
     AgendaCellComponent,
     AgendaRowComponent,
     DayAgendaComponent,
     FullAgendaComponent
+  ],
+  providers: [
+    AgendaService
   ]
 })
 export class AgendaModule {

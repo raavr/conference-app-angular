@@ -11,7 +11,7 @@ import { HomeComponent } from './';
       },
       { 
         path: 'home', 
-        component: HomeComponent 
+        redirectTo: ''
       },
     ])
   ],

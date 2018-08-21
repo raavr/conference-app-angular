@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Speaker } from '../speaker/speaker';
+import { Speaker } from '../../speakers/speaker/speaker';
 
 @Component({
   selector: 'speaker-modal',

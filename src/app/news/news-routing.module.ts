@@ -3,16 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { NewsDetailResolver } from './news-detail/news-detail.resolver';
 import { NewsListResolver } from './news-list/news-list.resolver';
 import { NewsListComponent, NewsDetailComponent, NewsOutletComponent } from './';
-import { NewsService } from './news/news.service';
 
 const routes: Routes = [
   {
-    path: 'news',
+    path: '',
     component: NewsOutletComponent,
     children: [
       { 
-        path: '', 
         component: NewsListComponent, 
+        path: '', 
         resolve: { 
           news: NewsListResolver 
         } 
@@ -34,7 +33,6 @@ const routes: Routes = [
   ],
   exports: [RouterModule],
   providers: [
-    NewsService, 
     NewsListResolver, 
     NewsDetailResolver
   ]

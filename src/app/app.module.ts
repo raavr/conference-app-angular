@@ -13,15 +13,16 @@ import { NoContentComponent } from './no-content';
 import { AppFooterComponent } from './app-footer';
 import { CollapseNavbarDirective } from './navbar/navbar-collapse.directive';
 
-import { SpeakersModule } from './speakers';
-import { PresentationsModule } from './presentations';
-import { PartnersModule } from './partners';
 import { HomeModule } from './home';
-import { NewsModule } from './news';
 import { AgendaModule } from './agenda';
+import { NewsService } from './news/news/news.service';
+import { PartnerService } from './partners/partner/partner.service';
+import { SpeakerService } from './speakers/speaker/speaker.service';
 
 const APP_SERVICE_PROVIDERS = [
-
+  NewsService,
+  PartnerService,
+  SpeakerService
 ];
 
 const APP_PROVIDERS = [
@@ -42,12 +43,7 @@ const APP_PROVIDERS = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    SpeakersModule,
-    PresentationsModule,
-    PartnersModule,
     HomeModule,
-    NewsModule,
-    AgendaModule,
     RouterModule.forRoot(ROUTES, { 
       useHash: true, 
       preloadingStrategy: PreloadAllModules 

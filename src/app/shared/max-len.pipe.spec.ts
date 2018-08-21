@@ -1,4 +1,4 @@
-import { MaxLenPipe } from './news-len.pipe';
+import { MaxLenPipe } from './max-len.pipe';
 
 describe('MaxLenPipe', () => {
 

@@ -1,5 +1,4 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { 
   NewsDetailComponent, 
   NewsCategoriesComponent, 
@@ -7,12 +6,12 @@ import {
   NewsComponent, 
   NewsOutletComponent 
 } from './'
-import { MaxLenPipe } from './news/news-len.pipe';
 import { NewsRoutingModule } from './news-routing.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
-    CommonModule,
+    SharedModule,
     NewsRoutingModule
   ],
   declarations: [
@@ -20,11 +19,7 @@ import { NewsRoutingModule } from './news-routing.module';
     NewsCategoriesComponent,
     NewsListComponent,
     NewsComponent,
-    NewsOutletComponent,
-    MaxLenPipe
-  ],
-  exports: [
-    MaxLenPipe
+    NewsOutletComponent
   ]
 })
 export class NewsModule {

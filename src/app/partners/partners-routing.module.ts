@@ -2,13 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { PartnerListComponent } from './';
 import { PartnerListResolver } from './partner-list/partner-list.resolver';
-import { PartnerService } from './partner/partner.service';
 
 @NgModule({
   imports: [
     RouterModule.forChild([
       { 
-        path: 'partners', 
+        path: '', 
         component: PartnerListComponent, 
         resolve: { 
           partners: PartnerListResolver 
@@ -17,10 +16,7 @@ import { PartnerService } from './partner/partner.service';
     ])
   ],
   exports: [RouterModule],
-  providers: [
-    PartnerService, 
-    PartnerListResolver
-  ]
+  providers: [PartnerListResolver]
 })
 export class PartnersRoutingModule {
 

@@ -2,13 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { SpeakerListComponent } from './';
 import { SpeakerListResolver } from './speaker-list/speaker-list.resolver';
-import { SpeakerService } from './speaker/speaker.service';
 
 @NgModule({
   imports: [
     RouterModule.forChild([
       { 
-        path: 'speakers', 
+        path: '', 
         component: SpeakerListComponent, 
         resolve: { 
           speakers: SpeakerListResolver 
@@ -17,10 +16,7 @@ import { SpeakerService } from './speaker/speaker.service';
     ])
   ],
   exports: [RouterModule],
-  providers: [
-    SpeakerService, 
-    SpeakerListResolver
-  ]
+  providers: [SpeakerListResolver]
 })
 export class SpeakersRoutingModule {
 

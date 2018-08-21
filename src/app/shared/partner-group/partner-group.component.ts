@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { PartnerGroup } from '../partner/partner-group';
+import { PartnerGroup } from '../../partners/partner/partner-group';
 
 @Component({
   selector: 'partner-group',
